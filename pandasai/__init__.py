@@ -28,7 +28,7 @@ class PandasAI:
 
     _task_instruction: str = """
 Today is {today_date}.
-You are provided with a pandas dataframe (df) with {num_rows} rows and {num_columns} columns.
+You do not have to read any csv file, it's already loaded into the provided pandas dataframe (df) with {num_rows} rows and {num_columns} columns.
 This is the result of `print(df.head({rows_to_display}))`:
 {df_head}.
 
@@ -44,7 +44,7 @@ Rewrite the answer to the question in a conversational way.
 
     _error_correct_instruction: str = """
 Today is {today_date}.
-You are provided with a pandas dataframe (df) with {num_rows} rows and {num_columns} columns.
+You do not have to read any csv file because it had already been loaded into the provided pandas dataframe (df) with {num_rows} rows and {num_columns} columns.
 This is the result of `print(df.head({rows_to_display}))`:
 {df_head}.
 
